@@ -7,12 +7,12 @@ builds:
   - env:
       - CGO_ENABLED=0
     goarch:
-      - amd64
+      # - amd64
       - arm64
     goos:
       - linux
-      - windows
-      - darwin
+      # - windows
+      # - darwin
     ldflags:
       - >-
         -s -w -X main.version={{.Version}}
@@ -21,7 +21,7 @@ builds:
 release:
   draft: true
   github:
-    owner: NETWAYS
+    owner: gianmarco-mameli
     name: check_prometheus
 archives:
   - format: binary
